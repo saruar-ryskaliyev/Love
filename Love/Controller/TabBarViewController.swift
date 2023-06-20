@@ -33,6 +33,10 @@ class TabBarViewController: UITabBarController {
         vc3.title = "Quotes"
         vc4.title = "Photos"
         
+        let appearance = UITabBarAppearance()
+        appearance.backgroundEffect = UIBlurEffect(style: .light)
+        tabBar.scrollEdgeAppearance = appearance
+        
         tabBar.tintColor = .label
         
         

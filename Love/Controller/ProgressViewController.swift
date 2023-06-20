@@ -8,6 +8,7 @@
 import UIKit
 import MapKit
 import AVFoundation
+import CLTypingLabel
 
 class ProgressViewController: UIViewController {
     
@@ -20,6 +21,80 @@ class ProgressViewController: UIViewController {
 
     
     var musicPlayer: AVAudioPlayer?
+    
+    
+    
+    
+    public var aigerimFirstMessage: CLTypingLabel = {
+        let label = CLTypingLabel()
+        //label.text = "Хэлоу хэлоу"
+        label.backgroundColor = .white
+        label.numberOfLines = 0
+        label.layer.cornerRadius = 8
+        label.layer.masksToBounds = true
+        label.charInterval = 0.05
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private let aigerimSecondMessage: CLTypingLabel = {
+        let label = CLTypingLabel()
+        label.backgroundColor = .white
+        label.numberOfLines = 0
+        label.layer.cornerRadius = 8
+        label.layer.masksToBounds = true
+        label.charInterval = 0.05
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private let saruarFirstMessage: CLTypingLabel = {
+        let label = CLTypingLabel()
+        label.charInterval = 0.05
+        label.text = "Салем, помнишь, когда мы в меге были, ты хотела в чаплин сходить?"
+        label.backgroundColor = .systemBlue
+        label.numberOfLines = 0
+        label.layer.cornerRadius = 8
+        label.layer.masksToBounds = true
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
+        let padding = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+       
+        
+        return label
+    }()
+    
+    
+    private let saruarSecondMessage: CLTypingLabel = {
+        let label = CLTypingLabel()
+        label.charInterval = 0.05
+        label.backgroundColor = .systemBlue
+        label.numberOfLines = 0
+        label.layer.cornerRadius = 8
+        label.layer.masksToBounds = true
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private let saruarThirdMessage: CLTypingLabel = {
+        let label = CLTypingLabel()
+        label.charInterval = 0.05
+        label.backgroundColor = .systemBlue
+        label.numberOfLines = 0
+        label.layer.cornerRadius = 8
+        label.layer.masksToBounds = true
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private let firstTextLabel: UILabel = {
+        let label = UILabel()
+        label.text = "First message:"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .systemFont(ofSize: 25, weight: .bold)
+        
+        return label
+    }()
     
     private let mdeeCover: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "mdee"))
@@ -76,6 +151,7 @@ class ProgressViewController: UIViewController {
         
         label.text = "days"
         label.font = .systemFont(ofSize: 25, weight: .bold)
+
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
@@ -106,7 +182,6 @@ class ProgressViewController: UIViewController {
     }()
 
     
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -122,8 +197,7 @@ class ProgressViewController: UIViewController {
         mapView.delegate = self
         
       
-        
-        view.backgroundColor = ProgressViewController.pinkColor
+        view.backgroundColor = UIColor(patternImage: UIImage(named: "back")!)
         
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         startDate = dateFormatter.date(from: "2022-09-07 00:00:00")
@@ -136,6 +210,24 @@ class ProgressViewController: UIViewController {
         
         
         configureUI()
+        
+        
+        
+        saruarFirstMessage.onTypingAnimationFinished = {
+            self.aigerimFirstMessage.text = "Хэллоу хэллоу"
+        }
+        
+        aigerimFirstMessage.onTypingAnimationFinished = {
+            self.aigerimSecondMessage.text = "Иееп"
+        }
+        
+        aigerimSecondMessage.onTypingAnimationFinished = {
+            self.saruarSecondMessage.text = "Пошли завтра в чаплин?"
+        }
+        
+        saruarSecondMessage.onTypingAnimationFinished = {
+            self.saruarThirdMessage.text = "Я хотел на стренджа или я краснею сходить"
+        }
         // Do any additional setup after loading the view.
     }
 
@@ -163,11 +255,57 @@ class ProgressViewController: UIViewController {
         scrollView.addSubview(favMusLabel)
         scrollView.addSubview(playButton)
         scrollView.addSubview(mdeeCover)
+        scrollView.addSubview(firstTextLabel)
+        scrollView.addSubview(saruarFirstMessage)
+        scrollView.addSubview(aigerimFirstMessage)
+        scrollView.addSubview(aigerimSecondMessage)
+        scrollView.addSubview(saruarSecondMessage)
+        scrollView.addSubview(saruarThirdMessage)
+        
+        
+        
+        
+        
+        
+        let firstTextLabelConstraint = [
+            firstTextLabel.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
+            firstTextLabel.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 30)
+        ]
+        
+        let saruarFirstMessageConstraint = [
+            saruarFirstMessage.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor, constant: 50),
+            saruarFirstMessage.topAnchor.constraint(equalTo: firstTextLabel.bottomAnchor, constant: 10),
+            saruarFirstMessage.widthAnchor.constraint(equalToConstant: 300),
+            saruarFirstMessage.heightAnchor.constraint(equalToConstant: 80),
+            
+            saruarSecondMessage.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor, constant: 100),
+            saruarSecondMessage.topAnchor.constraint(equalTo: aigerimSecondMessage.bottomAnchor, constant: 10),
+            saruarSecondMessage.widthAnchor.constraint(equalToConstant: 180),
+            saruarSecondMessage.heightAnchor.constraint(equalToConstant: 65),
+            
+            saruarThirdMessage.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor, constant: 100),
+            saruarThirdMessage.topAnchor.constraint(equalTo: saruarSecondMessage.bottomAnchor, constant: 10),
+            saruarThirdMessage.widthAnchor.constraint(equalToConstant: 180),
+            saruarThirdMessage.heightAnchor.constraint(equalToConstant: 85)
+            
+        ]
+        
+        let aigerimMessageConstraint = [
+            aigerimFirstMessage.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor, constant: -100),
+            aigerimFirstMessage.topAnchor.constraint(equalTo: saruarFirstMessage.bottomAnchor, constant: 10),
+            aigerimFirstMessage.widthAnchor.constraint(equalToConstant: 180),
+            aigerimFirstMessage.heightAnchor.constraint(equalToConstant: 40),
+            
+            aigerimSecondMessage.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor, constant: -100),
+            aigerimSecondMessage.topAnchor.constraint(equalTo: aigerimFirstMessage.bottomAnchor, constant: 10),
+            aigerimSecondMessage.widthAnchor.constraint(equalToConstant: 180),
+            aigerimSecondMessage.heightAnchor.constraint(equalToConstant: 40)
+        ]
         
         
         let mainLabelConstraint = [
             mainLabel.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
-            mainLabel.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            mainLabel.topAnchor.constraint(equalTo: saruarThirdMessage.topAnchor, constant: 100),
             mainLabel.widthAnchor.constraint(equalToConstant: 300)
         ]
 
@@ -214,8 +352,9 @@ class ProgressViewController: UIViewController {
             playButton.widthAnchor.constraint(equalToConstant: 80),
             playButton.heightAnchor.constraint(equalToConstant: 80)
         ]
+
         
-        scrollView.contentSize = CGSize(width: view.frame.size.width - 30, height: 1000)
+        scrollView.contentSize = CGSize(width: view.frame.size.width - 30, height: 1170)
 
  
             
@@ -227,6 +366,9 @@ class ProgressViewController: UIViewController {
         NSLayoutConstraint.activate(favMusLabelConstraint)
         NSLayoutConstraint.activate(playButtonConstraint)
         NSLayoutConstraint.activate(mdeeCoverConstraint)
+        NSLayoutConstraint.activate(firstTextLabelConstraint)
+        NSLayoutConstraint.activate(saruarFirstMessageConstraint)
+        NSLayoutConstraint.activate(aigerimMessageConstraint)
         
         playButton.addTarget(self, action: #selector(playPressed), for: .touchUpInside)
     }
@@ -318,4 +460,5 @@ extension ProgressViewController {
     
 }
     
+
 

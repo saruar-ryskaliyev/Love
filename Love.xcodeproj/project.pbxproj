@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7E88DAA92A408881001DDF14 /* Montserrat-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E88DAA82A408881001DDF14 /* Montserrat-BoldItalic.ttf */; };
-		7E88DAAB2A4099C4001DDF14 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7E88DAAA2A4099C4001DDF14 /* music.mp3 */; };
+		7E7138F92A41D31400AFC4ED /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7E7138F82A41D31400AFC4ED /* music.mp3 */; };
 		7EC7C3C22A3DEF3900453096 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC7C3C12A3DEF3900453096 /* AppDelegate.swift */; };
 		7EC7C3C42A3DEF3900453096 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC7C3C32A3DEF3900453096 /* SceneDelegate.swift */; };
 		7EC7C3C62A3DEF3900453096 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC7C3C52A3DEF3900453096 /* ViewController.swift */; };
@@ -19,11 +18,13 @@
 		7EC7C3DC2A3DF00F00453096 /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC7C3DB2A3DF00F00453096 /* QuotesViewController.swift */; };
 		7EC7C3DE2A3DF01C00453096 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC7C3DD2A3DF01C00453096 /* PhotosViewController.swift */; };
 		7EC7C3E32A3E037100453096 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EC7C3E22A3E037100453096 /* Launch Screen.storyboard */; };
+		D2D45B96DC4C919AF374D009 /* Pods_Love.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A4429D2BDAE1A32D04F53E9 /* Pods_Love.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7E88DAA82A408881001DDF14 /* Montserrat-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BoldItalic.ttf"; sourceTree = "<group>"; };
-		7E88DAAA2A4099C4001DDF14 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
+		0A4429D2BDAE1A32D04F53E9 /* Pods_Love.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Love.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23EDD03BBC8A1DB6F4892B58 /* Pods-Love.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Love.debug.xcconfig"; path = "Target Support Files/Pods-Love/Pods-Love.debug.xcconfig"; sourceTree = "<group>"; };
+		7E7138F82A41D31400AFC4ED /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 		7EC7C3BE2A3DEF3900453096 /* Love.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Love.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC7C3C12A3DEF3900453096 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EC7C3C32A3DEF3900453096 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +37,7 @@
 		7EC7C3DB2A3DF00F00453096 /* QuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewController.swift; sourceTree = "<group>"; };
 		7EC7C3DD2A3DF01C00453096 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		7EC7C3E22A3E037100453096 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		88D0923854F8D1B6382E4051 /* Pods-Love.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Love.release.xcconfig"; path = "Target Support Files/Pods-Love/Pods-Love.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2D45B96DC4C919AF374D009 /* Pods_Love.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +57,8 @@
 			children = (
 				7EC7C3C02A3DEF3900453096 /* Love */,
 				7EC7C3BF2A3DEF3900453096 /* Products */,
+				AC05C08CEAEE9FF3B6BAACDC /* Pods */,
+				E60863F3B3843FD1771C1055 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,8 +81,7 @@
 				7EC7C3C52A3DEF3900453096 /* ViewController.swift */,
 				7EC7C3CA2A3DEF3A00453096 /* Assets.xcassets */,
 				7EC7C3CF2A3DEF3A00453096 /* Info.plist */,
-				7E88DAA82A408881001DDF14 /* Montserrat-BoldItalic.ttf */,
-				7E88DAAA2A4099C4001DDF14 /* music.mp3 */,
+				7E7138F82A41D31400AFC4ED /* music.mp3 */,
 			);
 			path = Love;
 			sourceTree = "<group>";
@@ -109,6 +113,23 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		AC05C08CEAEE9FF3B6BAACDC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				23EDD03BBC8A1DB6F4892B58 /* Pods-Love.debug.xcconfig */,
+				88D0923854F8D1B6382E4051 /* Pods-Love.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E60863F3B3843FD1771C1055 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A4429D2BDAE1A32D04F53E9 /* Pods_Love.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -116,9 +137,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7EC7C3D22A3DEF3A00453096 /* Build configuration list for PBXNativeTarget "Love" */;
 			buildPhases = (
+				0CEDBD66F58B73FE4F0A79FC /* [CP] Check Pods Manifest.lock */,
 				7EC7C3BA2A3DEF3900453096 /* Sources */,
 				7EC7C3BB2A3DEF3900453096 /* Frameworks */,
 				7EC7C3BC2A3DEF3900453096 /* Resources */,
+				5536B4AE20D0E177EAF9C38D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,14 +190,55 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E88DAAB2A4099C4001DDF14 /* music.mp3 in Resources */,
+				7E7138F92A41D31400AFC4ED /* music.mp3 in Resources */,
 				7EC7C3E32A3E037100453096 /* Launch Screen.storyboard in Resources */,
-				7E88DAA92A408881001DDF14 /* Montserrat-BoldItalic.ttf in Resources */,
 				7EC7C3CB2A3DEF3A00453096 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0CEDBD66F58B73FE4F0A79FC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Love-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5536B4AE20D0E177EAF9C38D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Love/Pods-Love-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Love/Pods-Love-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Love/Pods-Love-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7EC7C3BA2A3DEF3900453096 /* Sources */ = {
@@ -311,6 +375,7 @@
 		};
 		7EC7C3D32A3DEF3A00453096 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23EDD03BBC8A1DB6F4892B58 /* Pods-Love.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -339,6 +404,7 @@
 		};
 		7EC7C3D42A3DEF3A00453096 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88D0923854F8D1B6382E4051 /* Pods-Love.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
