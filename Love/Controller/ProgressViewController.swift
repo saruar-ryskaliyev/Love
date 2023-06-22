@@ -58,9 +58,6 @@ class ProgressViewController: UIViewController {
         label.layer.masksToBounds = true
         label.translatesAutoresizingMaskIntoConstraints = false
         
-        let padding = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
-       
-        
         return label
     }()
     
@@ -91,7 +88,7 @@ class ProgressViewController: UIViewController {
         let label = UILabel()
         label.text = "First message:"
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .systemFont(ofSize: 25, weight: .bold)
+        label.font = UIFont(name: "Montserrat-ExtraBoldItalic", size: 25)
         
         return label
     }()
@@ -120,7 +117,7 @@ class ProgressViewController: UIViewController {
         let label = UILabel()
         label.text = "Our favorite music:"
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .systemFont(ofSize: 25, weight: .bold)
+        label.font = UIFont(name: "Montserrat-ExtraBoldItalic", size: 25)
         
         return label
     }()
@@ -141,7 +138,7 @@ class ProgressViewController: UIViewController {
         label.numberOfLines = 0
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .systemFont(ofSize: 25, weight: .bold)
+        label.font = UIFont(name: "Montserrat-ExtraBoldItalic", size: 25)
         
         return label
     }()
@@ -150,7 +147,7 @@ class ProgressViewController: UIViewController {
         let label = UILabel()
         
         label.text = "days"
-        label.font = .systemFont(ofSize: 25, weight: .bold)
+        label.font = UIFont(name: "Montserrat-ExtraBoldItalic", size: 25)
 
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -163,7 +160,7 @@ class ProgressViewController: UIViewController {
         let label = UILabel()
         
         label.text = "Together for"
-        label.font = .systemFont(ofSize: 25, weight: .bold)
+        label.font = UIFont(name: "Montserrat-ExtraBoldItalic", size: 25)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.textColor = .black
@@ -175,12 +172,13 @@ class ProgressViewController: UIViewController {
         let label = UILabel()
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .systemFont(ofSize: 25, weight: .bold)
+        label.font = UIFont(name: "Montserrat-ExtraBoldItalic", size: 25)
         label.textColor = .black
         
         return label
     }()
 
+    
     
     
     override func viewDidLoad() {
@@ -439,6 +437,7 @@ extension ProgressViewController: MKMapViewDelegate {
 extension ProgressViewController {
     
     private func startTimer(){
+        
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
             // Calculate the time interval between the start date and the current date
             let elapsedTime = Date().timeIntervalSince(self?.startDate ?? Date())
@@ -448,7 +447,6 @@ extension ProgressViewController {
             let hours = (hoursComponent + 24) % 24
             let minutes = Int((elapsedTime / 60).truncatingRemainder(dividingBy: 60))
             let seconds = Int(elapsedTime.truncatingRemainder(dividingBy: 60))
-
             
             DispatchQueue.main.async {
                 self?.timerLabel.text = String(format: "%02d:%02d:%02d:%02d", days, hours, minutes, seconds)

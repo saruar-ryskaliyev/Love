@@ -1,16 +1,20 @@
 PODS:
   - CLTypingLabel (0.4.0)
+  - FSCalendar (2.8.4)
 
 DEPENDENCIES:
   - CLTypingLabel
+  - FSCalendar
 
 SPEC REPOS:
   trunk:
     - CLTypingLabel
+    - FSCalendar
 
 SPEC CHECKSUMS:
   CLTypingLabel: 95a7d1faf7e3d1d952cd11cb0491d17d80c50934
+  FSCalendar: 2d1d0d9398f12d439f55c1fe0f01525b151b8260
 
-PODFILE CHECKSUM: 56da7701cd8ea0e3c2954877f426c88347965532
+PODFILE CHECKSUM: f3dd6d730086cf82f12f11b00d156fc19fe97bdd
 
 COCOAPODS: 1.12.0

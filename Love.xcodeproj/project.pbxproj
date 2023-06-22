@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7E7138F92A41D31400AFC4ED /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7E7138F82A41D31400AFC4ED /* music.mp3 */; };
+		7E7138FB2A41D73300AFC4ED /* Montserrat-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E7138FA2A41D73300AFC4ED /* Montserrat-ExtraBoldItalic.ttf */; };
+		7E7138FF2A44541C00AFC4ED /* DIYCalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7138FE2A44541C00AFC4ED /* DIYCalendarCell.swift */; };
 		7EC7C3C22A3DEF3900453096 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC7C3C12A3DEF3900453096 /* AppDelegate.swift */; };
 		7EC7C3C42A3DEF3900453096 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC7C3C32A3DEF3900453096 /* SceneDelegate.swift */; };
 		7EC7C3C62A3DEF3900453096 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC7C3C52A3DEF3900453096 /* ViewController.swift */; };
@@ -25,6 +27,8 @@
 		0A4429D2BDAE1A32D04F53E9 /* Pods_Love.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Love.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		23EDD03BBC8A1DB6F4892B58 /* Pods-Love.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Love.debug.xcconfig"; path = "Target Support Files/Pods-Love/Pods-Love.debug.xcconfig"; sourceTree = "<group>"; };
 		7E7138F82A41D31400AFC4ED /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
+		7E7138FA2A41D73300AFC4ED /* Montserrat-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		7E7138FE2A44541C00AFC4ED /* DIYCalendarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIYCalendarCell.swift; sourceTree = "<group>"; };
 		7EC7C3BE2A3DEF3900453096 /* Love.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Love.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC7C3C12A3DEF3900453096 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EC7C3C32A3DEF3900453096 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +59,7 @@
 		7EC7C3B52A3DEF3900453096 = {
 			isa = PBXGroup;
 			children = (
+				7E7138FA2A41D73300AFC4ED /* Montserrat-ExtraBoldItalic.ttf */,
 				7EC7C3C02A3DEF3900453096 /* Love */,
 				7EC7C3BF2A3DEF3900453096 /* Products */,
 				AC05C08CEAEE9FF3B6BAACDC /* Pods */,
@@ -96,6 +101,7 @@
 		7EC7C3E02A3DF17D00453096 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7E7138FE2A44541C00AFC4ED /* DIYCalendarCell.swift */,
 				7EC7C3E22A3E037100453096 /* Launch Screen.storyboard */,
 			);
 			path = View;
@@ -191,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E7138F92A41D31400AFC4ED /* music.mp3 in Resources */,
+				7E7138FB2A41D73300AFC4ED /* Montserrat-ExtraBoldItalic.ttf in Resources */,
 				7EC7C3E32A3E037100453096 /* Launch Screen.storyboard in Resources */,
 				7EC7C3CB2A3DEF3A00453096 /* Assets.xcassets in Resources */,
 			);
@@ -252,6 +259,7 @@
 				7EC7C3C62A3DEF3900453096 /* ViewController.swift in Sources */,
 				7EC7C3C22A3DEF3900453096 /* AppDelegate.swift in Sources */,
 				7EC7C3C42A3DEF3900453096 /* SceneDelegate.swift in Sources */,
+				7E7138FF2A44541C00AFC4ED /* DIYCalendarCell.swift in Sources */,
 				7EC7C3DC2A3DF00F00453096 /* QuotesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
