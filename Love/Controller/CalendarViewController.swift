@@ -7,19 +7,25 @@
 
 import UIKit
 import FSCalendar
+import SwiftUI
+
+
+var dateIdeaCalendar: String?
 
 class CalendarViewController: UIViewController {
     
-    private var selectedDates = [Date]()
+    private var selectedDates = [Date : String]()
+    private var selectedLabel: UILabel!
     
     private var calendar: FSCalendar = {
         let calendar = FSCalendar()
         calendar.appearance.titleDefaultColor = .systemPink
-        calendar.appearance.imageOffset = CGPoint(x: 0, y: -45)
+        calendar.appearance.imageOffset = CGPoint(x: 0, y: -10)
         
         calendar.register(DateCalendarCell.self, forCellReuseIdentifier: "DIYCalendarCell")
         return calendar
     }()
+    
 
     
     override func viewDidLoad() {
@@ -32,20 +38,25 @@ class CalendarViewController: UIViewController {
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Random date", style: .plain, target: self, action: #selector(randomDatePicked))
         
-        
         calendar.delegate = self
         calendar.dataSource = self
-        calendar.frame = CGRect(x: 0, y: 150, width: self.view.frame.width, height: 800)
+        calendar.frame = CGRect(x: 0, y: 150, width: self.view.frame.width, height: 650)
         
+
+
         view.addSubview(calendar)
         
-        // Do any additional setup after loading the view.
+
     }
     
     @objc func randomDatePicked(){
-        print("LOL")
+        let vc = UIHostingController(rootView: ContentView())
+        
+        self.present(vc, animated: true)
     }
     
+    
+
 }
 
 
@@ -58,23 +69,69 @@ extension CalendarViewController: FSCalendarDelegate, FSCalendarDataSource {
     }
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+
         
+        if selectedDates.contains(where: {$0.key == date}){
+            let alert = UIAlertController(title: "Select", message: "action", preferredStyle: .actionSheet)
+            
+            alert.addAction(UIAlertAction(title: "Info", style: .default , handler:{ (UIAlertAction)in
+                let info = UIAlertController(title: "This day:", message: self.selectedDates[date]! , preferredStyle: .alert)
+              
+                let OKAction = UIKit.UIAlertAction(title: "OK", style: .default) {
+                    (action: UIAlertAction!) in
+                }
+                
+                info.addAction(OKAction)
+                
+                
+                self.present(info, animated: true)
+            }))
+                
+            alert.addAction(UIAlertAction(title: "Change date idea", style: .default , handler:{ (UIAlertAction)in
+                let change = UIAlertController(title: "Type your date", message: nil, preferredStyle: .alert)
+                
+                change.addTextField { (textField) in
+                    textField.placeholder = "Type your date idea"
+                }
+       
+                let changeAction = UIKit.UIAlertAction(title: "Save", style: .default, handler: { alert -> Void in
+                    
+                    self.selectedDates.updateValue((change.textFields?[0].text!)!, forKey: date)
+                
+                })
+                
 
-        if selectedDates.contains(date){
-            selectedDates.removeAll(where: {$0 == date})
+    
+                change.addAction(changeAction)
+                
+                self.present(change, animated: true)
+                
+            }))
+
+            alert.addAction(UIAlertAction(title: "Delete", style: .destructive , handler:{ (UIAlertAction)in
+                self.selectedDates.removeValue(forKey: date)
+                calendar.reloadData()
+            }))
+                
+            alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler:{ (UIAlertAction)in
+                    print("User click Dismiss button")
+            }))
+            
+            self.present(alert, animated: true)
         } else{
-            selectedDates.append(date)
+            selectedDates[date] = dateIdeaCalendar
+    
         }
-
+        
+        
         
         calendar.reloadData()
     }
     
     func calendar(_ calendar: FSCalendar, imageFor date: Date) -> UIImage? {
         
-        if selectedDates.contains(date){
-            
-            return UIImage(systemName: "heart")?.withTintColor(.systemPink, renderingMode: .alwaysTemplate).scaled(with: CGFloat(2.0))
+        if selectedDates.contains(where: {$0.key == date}){
+            return UIImage(systemName: "heart.fill")?.withTintColor(.systemPink, renderingMode: .alwaysTemplate).scaled(with: CGFloat(1.0))
         }
         
         return nil

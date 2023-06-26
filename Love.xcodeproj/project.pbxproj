@@ -10,6 +10,10 @@
 		7E7138F92A41D31400AFC4ED /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7E7138F82A41D31400AFC4ED /* music.mp3 */; };
 		7E7138FB2A41D73300AFC4ED /* Montserrat-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E7138FA2A41D73300AFC4ED /* Montserrat-ExtraBoldItalic.ttf */; };
 		7E7138FF2A44541C00AFC4ED /* DIYCalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7138FE2A44541C00AFC4ED /* DIYCalendarCell.swift */; };
+		7E7139232A44937200AFC4ED /* DateIdeas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7139222A44937200AFC4ED /* DateIdeas.swift */; };
+		7E7139252A44960500AFC4ED /* RandomizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7139242A44960500AFC4ED /* RandomizerViewController.swift */; };
+		7E7139272A4587A900AFC4ED /* lucidagrande.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E7139262A4587A900AFC4ED /* lucidagrande.ttf */; };
+		7E7139672A48A4C600AFC4ED /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7E7139652A48A4C600AFC4ED /* DataModel.xcdatamodeld */; };
 		7EC7C3C22A3DEF3900453096 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC7C3C12A3DEF3900453096 /* AppDelegate.swift */; };
 		7EC7C3C42A3DEF3900453096 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC7C3C32A3DEF3900453096 /* SceneDelegate.swift */; };
 		7EC7C3C62A3DEF3900453096 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC7C3C52A3DEF3900453096 /* ViewController.swift */; };
@@ -29,6 +33,10 @@
 		7E7138F82A41D31400AFC4ED /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 		7E7138FA2A41D73300AFC4ED /* Montserrat-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		7E7138FE2A44541C00AFC4ED /* DIYCalendarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIYCalendarCell.swift; sourceTree = "<group>"; };
+		7E7139222A44937200AFC4ED /* DateIdeas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateIdeas.swift; sourceTree = "<group>"; };
+		7E7139242A44960500AFC4ED /* RandomizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomizerViewController.swift; sourceTree = "<group>"; };
+		7E7139262A4587A900AFC4ED /* lucidagrande.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = lucidagrande.ttf; sourceTree = "<group>"; };
+		7E7139662A48A4C600AFC4ED /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		7EC7C3BE2A3DEF3900453096 /* Love.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Love.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC7C3C12A3DEF3900453096 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EC7C3C32A3DEF3900453096 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +67,7 @@
 		7EC7C3B52A3DEF3900453096 = {
 			isa = PBXGroup;
 			children = (
+				7E7139262A4587A900AFC4ED /* lucidagrande.ttf */,
 				7E7138FA2A41D73300AFC4ED /* Montserrat-ExtraBoldItalic.ttf */,
 				7EC7C3C02A3DEF3900453096 /* Love */,
 				7EC7C3BF2A3DEF3900453096 /* Products */,
@@ -87,6 +96,7 @@
 				7EC7C3CA2A3DEF3A00453096 /* Assets.xcassets */,
 				7EC7C3CF2A3DEF3A00453096 /* Info.plist */,
 				7E7138F82A41D31400AFC4ED /* music.mp3 */,
+				7E7139652A48A4C600AFC4ED /* DataModel.xcdatamodeld */,
 			);
 			path = Love;
 			sourceTree = "<group>";
@@ -94,6 +104,7 @@
 		7EC7C3DF2A3DF17900453096 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7E7139222A44937200AFC4ED /* DateIdeas.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -115,6 +126,7 @@
 				7EC7C3D92A3DEFFE00453096 /* CalendarViewController.swift */,
 				7EC7C3DB2A3DF00F00453096 /* QuotesViewController.swift */,
 				7EC7C3DD2A3DF01C00453096 /* PhotosViewController.swift */,
+				7E7139242A44960500AFC4ED /* RandomizerViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -197,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E7138F92A41D31400AFC4ED /* music.mp3 in Resources */,
+				7E7139272A4587A900AFC4ED /* lucidagrande.ttf in Resources */,
 				7E7138FB2A41D73300AFC4ED /* Montserrat-ExtraBoldItalic.ttf in Resources */,
 				7EC7C3E32A3E037100453096 /* Launch Screen.storyboard in Resources */,
 				7EC7C3CB2A3DEF3A00453096 /* Assets.xcassets in Resources */,
@@ -254,11 +267,14 @@
 			files = (
 				7EC7C3DA2A3DEFFE00453096 /* CalendarViewController.swift in Sources */,
 				7EC7C3DE2A3DF01C00453096 /* PhotosViewController.swift in Sources */,
+				7E7139252A44960500AFC4ED /* RandomizerViewController.swift in Sources */,
 				7EC7C3D82A3DEFF500453096 /* ProgressViewController.swift in Sources */,
+				7E7139232A44937200AFC4ED /* DateIdeas.swift in Sources */,
 				7EC7C3D62A3DEF9600453096 /* TabBarViewController.swift in Sources */,
 				7EC7C3C62A3DEF3900453096 /* ViewController.swift in Sources */,
 				7EC7C3C22A3DEF3900453096 /* AppDelegate.swift in Sources */,
 				7EC7C3C42A3DEF3900453096 /* SceneDelegate.swift in Sources */,
+				7E7139672A48A4C600AFC4ED /* DataModel.xcdatamodeld in Sources */,
 				7E7138FF2A44541C00AFC4ED /* DIYCalendarCell.swift in Sources */,
 				7EC7C3DC2A3DF00F00453096 /* QuotesViewController.swift in Sources */,
 			);
@@ -461,6 +477,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7E7139652A48A4C600AFC4ED /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7E7139662A48A4C600AFC4ED /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 7E7139662A48A4C600AFC4ED /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7EC7C3B62A3DEF3900453096 /* Project object */;
 }

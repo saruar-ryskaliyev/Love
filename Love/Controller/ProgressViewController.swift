@@ -27,7 +27,6 @@ class ProgressViewController: UIViewController {
     
     public var aigerimFirstMessage: CLTypingLabel = {
         let label = CLTypingLabel()
-        //label.text = "Хэлоу хэлоу"
         label.backgroundColor = .white
         label.numberOfLines = 0
         label.layer.cornerRadius = 8
@@ -52,7 +51,7 @@ class ProgressViewController: UIViewController {
         let label = CLTypingLabel()
         label.charInterval = 0.05
         label.text = "Салем, помнишь, когда мы в меге были, ты хотела в чаплин сходить?"
-        label.backgroundColor = .systemBlue
+        label.backgroundColor = .white
         label.numberOfLines = 0
         label.layer.cornerRadius = 8
         label.layer.masksToBounds = true
@@ -65,7 +64,7 @@ class ProgressViewController: UIViewController {
     private let saruarSecondMessage: CLTypingLabel = {
         let label = CLTypingLabel()
         label.charInterval = 0.05
-        label.backgroundColor = .systemBlue
+        label.backgroundColor = .white
         label.numberOfLines = 0
         label.layer.cornerRadius = 8
         label.layer.masksToBounds = true
@@ -76,7 +75,7 @@ class ProgressViewController: UIViewController {
     private let saruarThirdMessage: CLTypingLabel = {
         let label = CLTypingLabel()
         label.charInterval = 0.05
-        label.backgroundColor = .systemBlue
+        label.backgroundColor = .white
         label.numberOfLines = 0
         label.layer.cornerRadius = 8
         label.layer.masksToBounds = true
@@ -195,7 +194,8 @@ class ProgressViewController: UIViewController {
         mapView.delegate = self
         
       
-        view.backgroundColor = UIColor(patternImage: UIImage(named: "back")!)
+        view.backgroundColor = UIColor(patternImage: UIImage(named: "emoji")!)
+        
         
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         startDate = dateFormatter.date(from: "2022-09-07 00:00:00")

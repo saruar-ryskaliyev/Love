@@ -1,0 +1,82 @@
+//
+//  DateIdeas.swift
+//  Love
+//
+//  Created by Saruar on 22.06.2023.
+//
+
+import Foundation
+
+
+struct DateIdeas {
+    let ideas = [
+            "Go on a picnic in the park",
+            "Visit a museum or art gallery",
+            "Take a cooking class together",
+            "Go to a concert or live show",
+            "Try a new restaurant or cuisine",
+            "Take a hike or nature walk",
+            "Go on a bike ride",
+            "Go stargazing",
+            "Go on a brewery or winery tour",
+            "Take a painting or pottery class",
+            "Go to a sports game or match",
+            "Visit an amusement park or fair",
+            "Go on a hot air balloon ride",
+            "Take a scenic drive or road trip",
+            "Have a game night or movie marathon",
+            "Go to a comedy show or improv night",
+            "Go on a horseback riding adventure",
+            "Visit a botanical garden or greenhouse",
+            "Take a yoga or fitness class together",
+            "Go on a kayaking or canoeing trip",
+            "Try a new outdoor activity, like surfing or snowshoeing",
+            "Visit a historic site or landmark",
+            "Go to a local festival or street fair",
+            "Take a pottery or ceramics class",
+            "Go on a camping trip or overnight hike",
+            "Try a new sport together, like tennis or golf",
+            "Visit a nearby beach or lake",
+            "Go to a karaoke or open mic night",
+            "Take a scenic train or boat ride",
+            "Visit a zoo or aquarium",
+            "Try a new hobby together, like photography or painting",
+            "Go on a scavenger hunt or treasure hunt",
+            "Visit a haunted house or ghost tour",
+            "Take a dance or fitness class, like Zumba or salsa",
+            "Go on a helicopter or airplane tour",
+            "Take a pottery or ceramics class together",
+            "Visit a planetarium or observatory",
+            "Go on a whale watching or dolphin watching tour",
+            "Try a new type of cuisine together",
+            "Visit a nearby vineyard or wine tasting room",
+            "Take a pottery or ceramics class together",
+            "Go on a river rafting or tubing trip",
+            "Visit a nearby historical site or museum",
+            "Visit a nearby wildlife sanctuary or nature preserve",
+            "Take a pottery or ceramics class together",
+            "Go on a guided nature hike or bird watching tour",
+            "Visit Bayterek Tower and enjoy the panoramic view of the city",
+            "Go ice skating or visit the ice rink during winter",
+            "Visit the Astana Opera House for a performance",
+            "Take a walk around the Astana Park of Lovers",
+            "Explore the National Museum of Kazakhstan",
+            "Visit the Astana EXPO-2017 site and learn about renewable energy",
+            "Take a sunset cruise on the Ishim River",
+            "Visit the Hazret Sultan Mosque and learn about the Islamic faith",
+            "Enjoy a day at the Khan Shatyr Entertainment Center",
+            "Have a fun day at the Duman Entertainment Center",
+            "Take a day trip to the nearby Burabay National Park",
+            "Go horseback riding in the nearby steppes",
+            "Visit the Astana Ballet for a performance",
+            "Take a walk around the Expo City",
+            "Enjoy a day at the Mega Silk Way shopping mall",
+            "Visit the Astana Zoo and see the animals",
+            "Enjoy a day at the Ailand Waterpark",
+            "Visit the Astana International School of Art and Design",
+            "Go on a shopping spree at the Khan Shatyr Mall",
+            "Visit the Astana International Tennis Centre",
+            "Enjoy a day at the nearby ALZHIR Museum-Memorial Complex",
+            "Visit the Astana Square of Independence"
+        ]
+}

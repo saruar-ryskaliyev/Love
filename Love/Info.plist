@@ -22,6 +22,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Montserrat-ExtraBoldItalic.ttf</string>
+		<string>lucidagrande.ttf</string>
 	</array>
 </dict>
 </plist>
